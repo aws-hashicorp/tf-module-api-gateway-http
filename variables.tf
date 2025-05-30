@@ -30,10 +30,13 @@ variable "certificate_commond_name" {
 
 variable "api_domain_name" {
   description = "Commond Name para el HTTP API"
+  type        = string
+  default     = ""
 }
 
 # CloudWatch Logs Variables
 variable "log_group_retention" {
   description = "The retention period (in days) for the CloudWatch log group"
   type        = number
+  default     = 1
 }
