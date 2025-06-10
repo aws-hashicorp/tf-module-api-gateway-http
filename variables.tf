@@ -54,6 +54,12 @@ variable "log_group_retention" {
 # Authorizer Variables
 # -------------------------
 
+variable "create_authorizer" {
+  description = "Flag to create the authorizer"
+  type        = bool
+  default     = true
+}
+
 variable "authorizer_type" {
   description = "The type of authorizer for API Gateway (e.g., REQUEST or JWT)"
   type        = string

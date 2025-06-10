@@ -60,6 +60,7 @@ resource "aws_apigatewayv2_api_mapping" "api_mapping" {
 # API Authorizer
 # -------------------------
 resource "aws_apigatewayv2_authorizer" "api_authorizer" {
+  count                             = var.create_authorizer ? 1 : 0
   api_id                            = aws_apigatewayv2_api.http_api.id
   authorizer_type                   = var.authorizer_type
   authorizer_uri                    = "arn:aws:apigateway:${var.aws_region}:lambda:path/2015-03-31/functions/${var.authorizer_lambda_arn}/invocations"
