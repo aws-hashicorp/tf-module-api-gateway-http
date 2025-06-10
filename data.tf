@@ -1,4 +1,4 @@
-data "aws_acm_certificate" "acm_api" {
-  domain   = var.certificate_commond_name
+data "aws_acm_certificate" "api_acm_cert" {
+  domain   = var.certificate_common_name
   statuses = ["ISSUED"]
 }
