@@ -63,29 +63,35 @@ variable "create_authorizer" {
 variable "authorizer_type" {
   description = "The type of authorizer for API Gateway (e.g., REQUEST or JWT)"
   type        = string
+  default     = ""
 }
 
 variable "aws_region" {
   description = "The AWS region where the authorizer will be deployed"
   type        = string
+  default     = ""
 }
 
 variable "authorizer_lambda_arn" {
   description = "ARN of the Lambda function used as the authorizer"
   type        = string
+  default     = ""
 }
 
 variable "identity_sources" {
   description = "List of identity sources for the authorizer"
   type        = list(string)
+  default     = []
 }
 
 variable "authorizer_name" {
   description = "Name of the authorizer"
   type        = string
+  default     = ""
 }
 
 variable "authorizer_payload_version" {
   description = "Payload version for the authorizer"
   type        = string
+  default     = "2.0"
 }
